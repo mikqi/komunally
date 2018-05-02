@@ -135,11 +135,11 @@ app.get('/logout', userController.logout)
 app.get('/available', passportConfig.isAuthenticated, availableController.index)
 app.get('/community', passportConfig.isAuthenticated, communityController.index)
 app.get('/community/import', passportConfig.isAuthenticated, communityController.import)
-app.post('/community/import/:id', passportConfig.isAuthenticated, communityController.do_import)
-app.get('/account', passportConfig.isAuthenticated, userController.getAccount)
-app.post('/account/profile', passportConfig.isAuthenticated, userController.postUpdateProfile)
-app.post('/account/delete', passportConfig.isAuthenticated, userController.postDeleteAccount)
-app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userController.getOauthUnlink)
+app.get('/community/import/:id', passportConfig.isAuthenticated, communityController.do_import)
+// app.get('/account', passportConfig.isAuthenticated, userController.getAccount)
+// app.post('/account/profile', passportConfig.isAuthenticated, userController.postUpdateProfile)
+// app.post('/account/delete', passportConfig.isAuthenticated, userController.postDeleteAccount)
+// app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userController.getOauthUnlink)
 
 /**
  * API examples routes.

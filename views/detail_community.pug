@@ -1,0 +1,81 @@
+extends layout
+
+block content
+  .container.mt-3
+    .row
+      .col-md-9
+        
+        .card.flex-md-row.mb-4.box-shadow.h-md-250
+          .card-body.d-flex.flex-column.align-items-start
+            strong.d-inline-block.mb-2.text-success
+              | Designs
+              a.badge.badge-secondary.badge-pill.badge-info.text-white.ml-4(href="#") #hastag1
+
+            h3.mb-0
+              a.text-dark(href='#') Post title
+            .mb-1.text-muted &nbsp;
+            p.card-text.mb-auto
+              | This is a wider card with supporting text below as a natural lead-in to additional content.
+            p.card-text.mb-auto.mt-3
+              | Allies
+            
+            .d-flex.justify-content-between.align-items-center.mt-3
+              img.mr-2.img-fluid.rounded-circle.w-75(src="https://source.unsplash.com/random/45x45", alt="sponshorship")
+              img.mr-2.img-fluid.rounded-circle.w-75(src="https://source.unsplash.com/random/45x45", alt="sponshorship")
+              img.mr-2.img-fluid.rounded-circle.w-75(src="https://source.unsplash.com/random/45x45", alt="sponshorship")
+              img.mr-2.img-fluid.rounded-circle.w-75(src="https://source.unsplash.com/random/45x45", alt="sponshorship")
+            a.btn.btn-primary.btn-block.mt-5(href='#') Help
+        
+        .card.flex-md-row.mb-4.box-shadow.h-md-250
+          .card-body.d-flex.flex-column.align-items-start
+            strong.d-inline-block.mb-2.text-success Designs
+            h3.mb-0
+              a.text-dark(href='#') Post title
+            .mb-1.text-muted &nbsp;
+            p.card-text.mb-auto
+              | This is a wider card with supporting text below as a natural lead-in to additional content.
+        
+        .card.flex-md-row.mb-4.box-shadow.h-md-250
+          .card-body.d-flex.flex-column.align-items-start
+            strong.d-inline-block.mb-2.text-success Designs
+            h3.mb-0
+              a.text-dark(href='#') Post title
+            .mb-1.text-muted &nbsp;
+            p.card-text.mb-auto
+              | This is a wider card with supporting text below as a natural lead-in to additional content.
+      .col-md-3
+        .card.flex-md-row.mb-4.box-shadow.h-md-250
+          .card-body.d-flex.flex-column.align-items-center.justify-content-center
+            img.img-fluid.rounded-circle.w-75(src="https://source.unsplash.com/random/300x300", alt="avatar")
+            //- strong.d-inline-block.mb-2.mt-2 Community Name
+            h4.mb-0.mt-3
+              a.text-dark(href='#') Community Name
+            - event = 'event name'
+            p.card-text.mb-auto.mt-0.text-muted
+              a.badge.badge-secondary.badge-pill.text-white.mr-1(href="#") #hastag1
+              a.badge.badge-secondary.badge-pill.text-white.mr-1(href="#") #hastag2
+            p.mt-2.text-small
+              | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error doloribus facere delectus quod! Modi veniam a, excepturi iste doloribus quaerat nisi amet eius saepe aliquam obcaecati, asperiores, quam placeat impedit?
+            //- .d-flex.justify-content-between.align-items-center.mt-3.mb-3(style="width: 130px")
+              //- add class `TEXT-PRIMARY` if no need to looking again
+              i.fa.fa-money-bill-alt.fa-lg.text-primary(
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Founded"
+              )
+              i.fa.fa-building.fa-lg.text-muted(
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Need Vanue"
+              )
+              i.fa.fa-camera-retro.fa-lg.text-primary(
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Has Publication"
+              )
+              i.fa.fa-users.fa-lg.text-muted(
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Need Human Resources"
+              )
+            
