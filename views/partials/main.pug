@@ -6,34 +6,40 @@ main(role='main')
         each val in [1,2,3,4,5,6,7,8,9]
           .col-md-4
             .card.mb-4.box-shadow
-              img.card-img-top(src='https://source.unsplash.com/random/300x200', alt='Card image cap')
+              img.card-img-top(src='https://source.unsplash.com/random/300x170', alt='Card image cap')
               .card-body
-                a(href="#")
-                  h5.card-title Judul Anunya
-                p.card-text
-                  | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                .d-flex.justify-content-between.align-items-center
-                  .btn-group
-                    button.btn.btn-sm.btn-outline-secondary.px-5(type='button') View
-                  .d-flex.justify-content-between.align-items-center(style="width: 100px")
-                    i.fa.fa-credit-card.fa-sm.text-primary(
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Send Money"
-                    )
-                    i.fa.fa-building.fa-sm.text-muted(
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Send Building"
-                    )
-                    i.fa.fa-users.fa-sm.text-primary(
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Send people"
-                    )
-                    i.fa.fa-trophy.fa-sm.text-muted(
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Send Medali"
-                    )
-                    
+                a.text-black-50(href="#")
+                  h5.card-title Communities, find your allies, make bigger impact!
+                p.text-muted(style="font-size: 14px") 
+                  | by&nbsp;
+                  span.text-capitalize Hasna Khairunnisa
+
+                .border.border-top.border-primary.mb-3
+
+                .d-flex.justify-content-between.flex-column
+                  .d-flex.justify-content-between.align-items-center
+                    .text-green 23 Days Left
+                    .d-flex.justify-content-between.align-items-center(style="width: 130px")
+                      i.fa.fa-money-bill-alt.fa-lg.text-primary(
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Need Founding"
+                      )
+                      i.fa.fa-building.fa-lg.text-muted(
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Need Vanue"
+                      )
+                      i.fa.fa-camera-retro.fa-lg.text-primary(
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Need Publication"
+                      )
+                      i.fa.fa-users.fa-lg.text-muted(
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Need Human Resources"
+                      )
+                  .d-flex.mt-3
+                    a.badge.badge-secondary.badge-pill.text-white.mr-1(href="#") #hastags
+                    a.badge.badge-secondary.badge-pill.text-white.mr-1(href="#") #hastags

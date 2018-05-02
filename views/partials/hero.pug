@@ -1,9 +1,11 @@
-section.jumbotron.text-center
+section.jumbotron.text-center.m-0
   .container
-    h1.jumbotron-heading Si Komochan
+    h1.jumbotron-heading Communities, find your allies, make bigger impact!
     p.lead
-      | Monotonectally syndicate turnkey partnerships with customer directed manufactured products. Proactively deliver innovative leadership skills through high-quality deliverables. Monotonectally incubate real-time supply chains via flexible outsourcing. Energistically procrastinate parallel vortals for interoperable resources. Professionally enhance synergistic supply chains whereas standards compliant.
-    p
-      a.btn.px-3.btn-primary.btn-social(href='/auth/facebook')
-        i.fab.fa-facebook-f.fa-sm.mr-3
-        | Sign in with Facebook
+      | As the biggest social media platform, Facebook has a very big and diverse groups/communities from all over the world, from different goals and background. But we do realize, there's not much conversation between each other. In the meantime, maybe we don't think there's an urgency to connect.
+
+    if !user
+      p
+        a.btn.px-3.btn-primary.btn-social(href='/auth/facebook')
+          i.fab.fa-facebook-f.fa-sm.mr-3
+          | Sign in with Facebook
