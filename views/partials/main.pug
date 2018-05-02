@@ -8,7 +8,7 @@ main(role='main')
             .card.mb-4.box-shadow
               img.card-img-top(src='https://source.unsplash.com/random/300x170', alt='Card image cap')
               .card-body
-                a.text-black-50(href="#")
+                a.text-black-50(href=`/detail_event/${val}`)
                   h5.card-title Communities, find your allies, make bigger impact!
                 p.text-muted(style="font-size: 14px") 
                   | by&nbsp;
@@ -20,6 +20,8 @@ main(role='main')
                   .d-flex.justify-content-between.align-items-center
                     .text-green 23 Days Left
                     .d-flex.justify-content-between.align-items-center(style="width: 130px")
+
+                      //- add class `TEXT-PRIMARY` if no need to looking again
                       i.fa.fa-money-bill-alt.fa-lg.text-primary(
                         data-toggle="tooltip"
                         data-placement="top"

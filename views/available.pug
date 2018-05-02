@@ -2,25 +2,81 @@ extends layout
 
 block content
   .container.mt-3
+    h3 Strength
     .row
-      each val in [1,2,3,4]
-        .col-md-6
-          .card.flex-md-row.mb-4.box-shadow.h-md-250
-            .card-body.d-flex.flex-column.align-items-start
-              strong.d-inline-block.mb-2.text-success Design
-              h3.mb-0
-                a.text-dark(href='#') Post title
-              .mb-1.text-muted &nbsp;
-              p.card-text.mb-auto
-                | This is a wider card with supporting text below as a natural lead-in to additional content.
-              a(href='#') View
-            img.card-img-right.flex-auto.d-none.d-lg-block(alt='Thumbnail [200x250]', style='width: 200px; height: 250px;', src='https://source.unsplash.com/random/200x250')
+      //- CONNECTIONS
+      .col-md-3.js-card-form
+        .card.flex-md-row.mb-4.box-shadow.h-md-250
+          .card-body.d-flex.flex-column.align-items-start
+            strong.d-inline-block.mb-2.text-success Connections
+            .js-strength-static
+              h1.mb-0.text-right
+                .text-dark 0
+            .js-strength-form.d-none
+              form(action="post")
+                input.form-control(type="number", name="connection")
+                a.btn.w-50.mt-3.js-strength-cancel-trigger Cancel
+                input.btn.btn-primary.w-50.mt-3(type="submit", value="Save")
+            .mb-1.text-muted &nbsp;
+            p.card-text.mb-auto
+            a.js-strength-edit-trigger(href='#') Edit
+
+      //- Vanue
+      .col-md-3.js-card-form
+        .card.flex-md-row.mb-4.box-shadow.h-md-250
+          .card-body.d-flex.flex-column.align-items-start
+            strong.d-inline-block.mb-2.text-success Vanue
+            .js-strength-static
+              h1.mb-0.text-right
+                .text-dark 0
+            .js-strength-form.d-none
+              form(action="post")
+                input.form-control(type="number", name="vanue")
+                a.btn.w-50.mt-3.js-strength-cancel-trigger Cancel
+                input.btn.btn-primary.w-50.mt-3(type="submit", value="Save")
+            .mb-1.text-muted &nbsp;
+            p.card-text.mb-auto
+            a.js-strength-edit-trigger(href='#') Edit
+
+      //- Fundings
+      .col-md-3.js-card-form
+        .card.flex-md-row.mb-4.box-shadow.h-md-250
+          .card-body.d-flex.flex-column.align-items-start
+            strong.d-inline-block.mb-2.text-success Fundings
+            .js-strength-static
+              h1.mb-0.text-right
+                .text-dark 0
+            .js-strength-form.d-none
+              form(action="post")
+                input.form-control(type="number", name="fundings")
+                a.btn.w-50.mt-3.js-strength-cancel-trigger Cancel
+                input.btn.btn-primary.w-50.mt-3(type="submit", value="Save")
+            .mb-1.text-muted &nbsp;
+            p.card-text.mb-auto
+            a.js-strength-edit-trigger(href='#') Edit
+
+      //- Publication
+      .col-md-3.js-card-form
+        .card.flex-md-row.mb-4.box-shadow.h-md-250
+          .card-body.d-flex.flex-column.align-items-start
+            strong.d-inline-block.mb-2.text-success Publication
+            .js-strength-static
+              h1.mb-0.text-right
+                .text-dark 0
+            .js-strength-form.d-none
+              form(action="post")
+                input.form-control(type="number", name="publication")
+                a.btn.w-50.mt-3.js-strength-cancel-trigger Cancel
+                input.btn.btn-primary.w-50.mt-3(type="submit", value="Save")
+            .mb-1.text-muted &nbsp;
+            p.card-text.mb-auto
+            a.js-strength-edit-trigger(href='#') Edit
 
   .container.mt-4
     .row
       if user
         .col-md-6
-          h3 By You
+          h3 By Me
           .col-md-12.p-0
             .card.flex-md-row.mb-4.box-shadow.h-md-250
               .card-body.d-flex.flex-column.align-items-start
@@ -34,7 +90,7 @@ block content
               .card-body.d-flex.flex-column.align-items-start
                 | Lorem ipsum dolor sit amet.
       .col-md-6
-        h3 By People
+        h3 By Allies
         .col-md-12.p-0
           .card.flex-md-row.mb-4.box-shadow.h-md-250
             .card-body.d-flex.flex-column.align-items-start
