@@ -9,7 +9,7 @@ $gray: #737373;
 $gray-dark: #404040;
 $gray-darker: #121212;
 
-$brand-primary: #2ac5ee;
+$brand-primary: rgb(100, 100, 250);
 $brand-success: #0f9d58;
 $brand-warning: #f4b400;
 $brand-danger: #d80017;
@@ -58,11 +58,11 @@ $state-danger-bg: $brand-danger;
 // -------------------------
 
 $navbar-height: 50px;
-$navbar-default-bg: rgba(255,255,255,0.95);
-$navbar-default-link-color: $gray-darker;
-$navbar-default-link-active-color: $brand-primary;
+$navbar-default-bg: $brand-primary;
+$navbar-default-link-color: $gray-lighter;
+$navbar-default-link-active-color: $gray-lighter;
 $navbar-default-link-active-bg: transparent;
-$navbar-default-link-hover-color: $brand-primary;
+$navbar-default-link-hover-color: $gray-lighter;
 $navbar-default-link-hover-bg: transparent;
-$navbar-default-brand-color: $gray-darker;
-$navbar-default-brand-hover-color: $brand-primary;
+$navbar-default-brand-color: $gray-lighter;
+$navbar-default-brand-hover-color: $gray-lighter;

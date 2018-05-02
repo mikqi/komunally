@@ -427,6 +427,7 @@
       &:focus {
         color: $navbar-default-link-active-color;
         background-color: $navbar-default-link-active-bg;
+        border-bottom: 2px solid #fff;
       }
     }
     > .disabled > a {
@@ -464,6 +465,7 @@
       &:focus {
         background-color: $navbar-default-link-active-bg;
         color: $navbar-default-link-active-color;
+        border-bottom: 2px solid #fff;
       }
     }
 
@@ -484,6 +486,7 @@
           &:focus {
             color: $navbar-default-link-active-color;
             background-color: $navbar-default-link-active-bg;
+            border-bottom: 2px solid #fff;
           }
         }
         > .disabled > a {
