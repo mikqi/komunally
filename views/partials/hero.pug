@@ -1,11 +1,12 @@
-section.jumbotron.text-center.m-0
+section.jumbotron.text-center.m-0(style="background-image: url(images/header_bg.png);background-position: center")
   .container
-    h1.jumbotron-heading Communities, find your allies, make bigger impact!
-    p.lead
-      | As the biggest social media platform, Facebook has a very big and diverse groups/communities from all over the world, from different goals and background. But we do realize, there's not much conversation between each other. In the meantime, maybe we don't think there's an urgency to connect.
+    .offset-6.text-white
+      h1.jumbotron-heading Communities, find your allies, make bigger impact!
+      p.lead.mb-4.mt-4
+        | As the biggest social media platform, Facebook has a very big and diverse groups/communities from all over the world, from different goals and background
 
-    if !user
-      p
-        a.btn.px-3.btn-primary.btn-social(href='/auth/facebook')
-          i.fab.fa-facebook-f.fa-sm.mr-3
-          | Sign in with Facebook
+      if !user
+        p
+          a.btn.px-3.btn-dark.btn-social(href='/auth/facebook')
+            i.fab.fa-facebook-f.fa-sm.mr-3
+            | Sign in with Facebook
