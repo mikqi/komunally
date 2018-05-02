@@ -4,45 +4,73 @@ block content
   .container.mt-3
     .row
       .col-md-9
-        
-        .card.flex-md-row.mb-4.box-shadow.h-md-250
-          .card-body.d-flex.flex-column.align-items-start
-            strong.d-inline-block.mb-2.text-success
-              | Designs
-              a.badge.badge-secondary.badge-pill.badge-info.text-white.ml-4(href="#") #hastag1
+        each id in [1, 2, 3, 4]
+          .card.flex-md-row.mb-4.box-shadow.h-md-250
+            .modal.fade(id=`offerhelp-${id}`, tabindex='-1', role='dialog', aria-labelledby=`offer-help-${id}`, aria-hidden='true')
+              .modal-dialog.modal-dialog-centered(role='document')
+                .modal-content
+                  .modal-header
+                    h5(id=`#offer-help-${id}`, modal-title=`Offer Help ${id}`) Offer Help
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                      span(aria-hidden='true') ×
+                  .modal-body
+                    form
+                      select.form-control
+                        option(value="") Founding
+                        option(value="") Vanue
+                        option(value="") Resources
+                        option(value="") Branding
+                  .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                    button.btn.btn-primary(type='button') Save changes
 
-            h3.mb-0
-              a.text-dark(href='#') Post title
-            .mb-1.text-muted &nbsp;
-            p.card-text.mb-auto
-              | This is a wider card with supporting text below as a natural lead-in to additional content.
-            p.card-text.mb-auto.mt-3
-              | Allies
-            
-            .d-flex.justify-content-between.align-items-center.mt-3
-              img.mr-2.img-fluid.rounded-circle.w-75(src="https://source.unsplash.com/random/45x45", alt="sponshorship")
-              img.mr-2.img-fluid.rounded-circle.w-75(src="https://source.unsplash.com/random/45x45", alt="sponshorship")
-              img.mr-2.img-fluid.rounded-circle.w-75(src="https://source.unsplash.com/random/45x45", alt="sponshorship")
-              img.mr-2.img-fluid.rounded-circle.w-75(src="https://source.unsplash.com/random/45x45", alt="sponshorship")
-            a.btn.btn-primary.btn-block.mt-5(href='#') Help
-        
-        .card.flex-md-row.mb-4.box-shadow.h-md-250
-          .card-body.d-flex.flex-column.align-items-start
-            strong.d-inline-block.mb-2.text-success Designs
-            h3.mb-0
-              a.text-dark(href='#') Post title
-            .mb-1.text-muted &nbsp;
-            p.card-text.mb-auto
-              | This is a wider card with supporting text below as a natural lead-in to additional content.
-        
-        .card.flex-md-row.mb-4.box-shadow.h-md-250
-          .card-body.d-flex.flex-column.align-items-start
-            strong.d-inline-block.mb-2.text-success Designs
-            h3.mb-0
-              a.text-dark(href='#') Post title
-            .mb-1.text-muted &nbsp;
-            p.card-text.mb-auto
-              | This is a wider card with supporting text below as a natural lead-in to additional content.
+            .card-body.d-flex.flex-column.align-items-start
+              strong.d-inline-block.mb-2.text-success
+                | Designs
+                a.badge.badge-secondary.badge-pill.badge-info.text-white.ml-4(href="#") #hastag1
+
+              h3.mb-0
+                a.text-dark(href='#') Post title
+              .mb-1.text-muted &nbsp;
+              p.card-text.mb-auto
+                | This is a wider card with supporting text below as a natural lead-in to additional content.
+
+              .d-flex.justify-content-between.flex-column.u-mt-5
+                .text-green 23 Days Left
+                .d-flex.justify-content-between.mt-3.align-items-center(style="width: 130px")
+
+                  //- add class `TEXT-PRIMARY` if no need to looking again
+                  i.fa.fa-money-bill-alt.fa-lg.text-primary(
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Need Founding"
+                  )
+                  i.fa.fa-building.fa-lg.text-muted(
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Need Vanue"
+                  )
+                  i.fa.fa-camera-retro.fa-lg.text-primary(
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Need Branding"
+                  )
+                  i.fa.fa-users.fa-lg.text-muted(
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Need Human Resources"
+                  )
+
+              p.card-text.mb-auto.mt-3
+                | Allies
+              .d-flex.justify-content-between.align-items-center.mt-3
+                img.mr-2.img-fluid.rounded-circle.w-75(src="https://source.unsplash.com/random/45x45", alt="sponshorship")
+                img.mr-2.img-fluid.rounded-circle.w-75(src="https://source.unsplash.com/random/45x45", alt="sponshorship")
+                img.mr-2.img-fluid.rounded-circle.w-75(src="https://source.unsplash.com/random/45x45", alt="sponshorship")
+                img.mr-2.img-fluid.rounded-circle.w-75(src="https://source.unsplash.com/random/45x45", alt="sponshorship")
+              a.btn.btn-primary.btn-block.mt-5.js-(href=`#offerhelp-${id}` data-toggle="modal" data-target=`#offerhelp-${id}`) Offer Strength
+
+      //- RIGHT SIDE FOR DETAIL USER
       .col-md-3
         .card.flex-md-row.mb-4.box-shadow.h-md-250
           .card-body.d-flex.flex-column.align-items-center.justify-content-center
