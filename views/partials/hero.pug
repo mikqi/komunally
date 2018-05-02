@@ -1,16 +1,16 @@
 section.jumbotron.text-center.m-0(style="background-image: url(images/header_bg.png);background-position: center; background-repeat: no-repeat; background-size: cover")
   .container
     .offset-6.text-white
-    h1.jumbotron-heading Communities, find your allies, make bigger impact!
+      h1.jumbotron-heading Communities, find your allies, make bigger impact!
       p.lead.mb-4.mt-4
-        | Komunally is existed to help communities combine their power to form an ally and together make their good mission in the world comes true.
+        | As the biggest social media platform, Facebook has a very big and diverse groups/communities from all over the world, from different goals and background
 
-    p
-      if user
-        img.thumbnail(src=`${user.profile.picture}?type=large`, width='90', height='90')
-        p Logged in as
-          b &nbsp;#{user.profile.name}
-      else
-        a.btn.px-3.btn-primary.btn-social(href='/auth/facebook')
-          i.fab.fa-facebook-f.fa-sm.mr-3
-          | Sign in with Facebook
+      p
+        if user
+          img.thumbnail(src=`${user.profile.picture}?type=large`, width='90', height='90')
+          p Logged in as
+            b &nbsp;#{user.profile.name}
+        else
+          a.btn.px-3.btn-dark.btn-social(href='/auth/facebook')
+            i.fab.fa-facebook-f.fa-sm.mr-3
+            | Sign in with Facebook
