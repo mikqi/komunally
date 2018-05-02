@@ -2,9 +2,8 @@ extends layout
 
 block content
   .container.mt-3
-    .row
-      a.btn.px-3.btn-primary.btn-social(href='/community/import')
-        | Import from Facebook Group
+    h3 Communities
+
   .container.mt-3
     .row
       each community in communities
@@ -13,7 +12,11 @@ block content
             .card-body.d-flex.flex-column.align-items-start
               strong.d-inline-block.mb-2.text-success Community
               h3.mb-0
-                a.text-dark(href='#') #{community.name}
+                a.text-dark(href=`/community/${community.id}`) #{community.name}
               .mb-1.text-muted &nbsp;
               p.card-text.mb-auto
                 | #{community.description ? community.description : "-"}
+
+  .container.mt-3
+    a.btn.px-3.btn-primary.btn-social(href='/community/import')
+      | Import from Facebook Group
