@@ -90,7 +90,7 @@ block content
         else
           p: a(href='/auth/google') Link your Google account
       .col-sm-offset-3.col-sm-4
-        if user.facebook
+        if user.facebook_id
           p: a.text-danger(href='/account/unlink/facebook') Unlink your Facebook account
         else
           p: a(href='/auth/facebook') Link your Facebook account

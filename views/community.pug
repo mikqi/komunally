@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .container.mt-3
+    h3 Communities
+
+  .container.mt-3
+    .row
+      each community in communities
+        .col-md-6
+          .card.flex-md-row.mb-4.box-shadow.h-md-250
+            .card-body.d-flex.flex-column.align-items-start
+              strong.d-inline-block.mb-2.text-success Community
+              h3.mb-0
+                a.text-dark(href=`/community/${community.id}`) #{community.name}
+              .mb-1.text-muted &nbsp;
+              p.card-text.mb-auto
+                | #{community.description ? community.description : "-"}
+
+  .container.mt-3
+    a.btn.px-3.btn-primary.btn-social(href='/community/import')
+      | Import from Facebook Group

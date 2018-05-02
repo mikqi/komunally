@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .container.mt-3
+    .row
+      each group in groups
+        .col-md-12
+          .card.flex-md-row.mb-4.box-shadow.h-md-250
+            .card-body.d-flex.flex-column.align-items-start
+              h3.mb-0
+                a.text-dark(href='#') #{group.name}
+              .mb-1.text-muted &nbsp;
+              p.card-text.mb-auto
+                | #{group.description ? group.description : "-"}
+              a.btn.px-3.btn-primary.btn-social(href=`/community/import/${group.id}`)
+                | Import
+            - var cover = group.cover ? group.cover.source : "https://source.unsplash.com/random/200x250"
+            img.card-img-right.flex-auto.d-none.d-lg-block(alt='Thumbnail [200x250]', style='width: 200px; height: 250px;', src=`${cover}`)

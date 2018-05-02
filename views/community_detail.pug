@@ -26,8 +26,8 @@ block content
 
             .card-body.d-flex.flex-column.align-items-start
               strong.d-inline-block.mb-2.text-success
-                | Designs
-                a.badge.badge-secondary.badge-pill.badge-info.text-white.ml-4(href="#") #hastag1
+                | Category
+                a.badge.badge-secondary.badge-pill.badge-info.text-white.ml-4(href="#") #event
 
               h3.mb-0
                 a.text-dark(href='#') Post title
@@ -77,13 +77,13 @@ block content
             img.img-fluid.rounded-circle.w-75(src="https://source.unsplash.com/random/300x300", alt="avatar")
             //- strong.d-inline-block.mb-2.mt-2 Community Name
             h4.mb-0.mt-3
-              a.text-dark(href='#') Community Name
+              a.text-dark(href='#') #{community.name}
             - event = 'event name'
             p.card-text.mb-auto.mt-0.text-muted
-              a.badge.badge-secondary.badge-pill.text-white.mr-1(href="#") #hastag1
-              a.badge.badge-secondary.badge-pill.text-white.mr-1(href="#") #hastag2
+              a.badge.badge-secondary.badge-pill.text-white.mr-1(href="#") #social
+              a.badge.badge-secondary.badge-pill.text-white.mr-1(href="#") #environment
             p.mt-2.text-small
-              | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error doloribus facere delectus quod! Modi veniam a, excepturi iste doloribus quaerat nisi amet eius saepe aliquam obcaecati, asperiores, quam placeat impedit?
+              | #{community.description ? community.description : 'No description.'}
             //- .d-flex.justify-content-between.align-items-center.mt-3.mb-3(style="width: 130px")
               //- add class `TEXT-PRIMARY` if no need to looking again
               i.fa.fa-money-bill-alt.fa-lg.text-primary(
@@ -106,4 +106,4 @@ block content
                 data-placement="top"
                 title="Need Human Resources"
               )
-            
+

@@ -47,8 +47,8 @@ passport.use(new FacebookStrategy({
       if (err) { return done(err) }
       const user = existingUser || new User()
       user.email = profile._json.email
-      user.facebook = profile.id
-      user.tokens.push({ kind: 'facebook', accessToken })
+      user.facebook_id = profile.id
+      user.tokens = [{ kind: 'facebook', accessToken }]
       user.profile.name = user.profile.name || `${profile.name.givenName} ${profile.name.familyName}`
       user.profile.first_name = user.profile.first_name || `${profile.name.givenName}`
       user.profile.last_name = user.profile.last_name || `${profile.name.familyName}`
@@ -68,7 +68,7 @@ exports.isAuthenticated = (req, res, next) => {
   if (req.isAuthenticated()) {
     return next()
   }
-  res.redirect('/login')
+  res.redirect('/')
 }
 
 /**
