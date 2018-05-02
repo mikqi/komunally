@@ -1,10 +1,12 @@
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-primary border-bottom box-shadow">
-  <h5 class="my-0 mr-md-auto text-white font-weight-normal">Si Komo</h5>
-  <nav class="my-2 my-md-0 mr-md-3">
-    <a class="p-2 text-white" href="#">Features</a>
-    <a class="p-2 text-white" href="#">Enterprise</a>
-    <a class="p-2 text-white" href="#">Support</a>
-    <a class="p-2 text-white" href="#">Pricing</a>
-  </nav>
-  <a class="btn btn-outline-primary" href="#">Sign up</a>
-</div>
+nav.navbar.navbar-expand-lg.navbar-dark.bg-primary(style="padding-left:100px; padding-right:100px")
+  a.navbar-brand(href='/') Si Komo
+  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarNavAltMarkup.collapse.navbar-collapse
+    .navbar-nav.ml-auto
+      a.nav-item.nav-link(href='/' class=title =='Home'? 'active' : '')
+        | Home
+        span.sr-only (current)
+        a.nav-item.nav-link(href='/available' class=title =='Available' ? 'active' : '') Available
+      if user
+        a.nav-item.nav-link(href='/logout') Logout
