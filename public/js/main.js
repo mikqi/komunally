@@ -1,5 +1,6 @@
+// global $
 $(document).ready(() => {
-
-  // Place JavaScript code here...
-
-});
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+})
