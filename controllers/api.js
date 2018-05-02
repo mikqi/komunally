@@ -19,11 +19,17 @@ exports.getApi = (req, res) => {
 exports.getFacebook = (req, res, next) => {
   const token = req.user.tokens.find(token => token.kind === 'facebook')
   graph.setAccessToken(token.accessToken)
-  graph.get(`${req.user.facebook}?fields=id,name,email,first_name,last_name,gender,link,locale,timezone`, (err, profile) => {
+  console.log(req.user)
+  graph.get(`${req.user.facebook_id}?fields=id,name,email,first_name,last_name,gender,link,locale,timezone`, (err, profile) => {
     if (err) { return next(err) }
-    res.render('api/facebook', {
-      title: 'Facebook API',
-      profile
+    graph.get(`${req.user.facebook_id}/groups?fields=id,name,email,description`, (err, groups) => {
+      if (err) { return next(err) }
+      console.log(groups)
+      res.render('api/facebook', {
+        title: 'Facebook API',
+        profile,
+        groups
+      })
     })
   })
 }

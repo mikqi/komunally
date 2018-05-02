@@ -29,3 +29,7 @@ block content
   h6 Email: #{profile.email}
   h6 Locale: #{profile.locale}
   h6 Timezone: #{profile.timezone}
+  each group, index in groups.data
+    p
+    p Group #{index + 1}: #{group.name}
+    p Desription: #{group.description ? group.description : "-"}
