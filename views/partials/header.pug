@@ -5,9 +5,9 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-primary(style="padding-left:100px; pa
     span.navbar-toggler-icon
   #navbarNavAltMarkup.collapse.navbar-collapse
     .navbar-nav.ml-auto
-      a.nav-item.nav-link(href='/' class=title =='Home'? 'active' : '')
-        | Home
-        span.sr-only (current)
-        a.nav-item.nav-link(href='/available' class=title =='Available' ? 'active' : '') Dashboard
       if user
+        a.nav-item.nav-link(href='/' class=title =='Home'? 'active' : '')
+          | Home
+          span.sr-only (current)
+          a.nav-item.nav-link(href='/available' class=title =='Available' ? 'active' : '') Dashboard
         a.nav-item.nav-link(href='/logout') Logout
