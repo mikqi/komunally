@@ -4,6 +4,10 @@ section.jumbotron.text-center
     p.lead
       | Monotonectally syndicate turnkey partnerships with customer directed manufactured products. Proactively deliver innovative leadership skills through high-quality deliverables. Monotonectally incubate real-time supply chains via flexible outsourcing. Energistically procrastinate parallel vortals for interoperable resources. Professionally enhance synergistic supply chains whereas standards compliant.
     p
-      a.btn.px-3.btn-primary.btn-social(href='/auth/facebook')
-        i.fab.fa-facebook-f.fa-sm.mr-3
-        | Sign in with Facebook
+      if user
+        img.thumbnail(src=`${user.profile.picture}`, width='45', height='45')
+        b &nbsp;#{user.profile.name}
+      else
+        a.btn.px-3.btn-primary.btn-social(href='/auth/facebook')
+          i.fab.fa-facebook-f.fa-sm.mr-3
+          | Sign in with Facebook

@@ -7,6 +7,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-primary(style="padding-left:100px; pa
       a.nav-item.nav-link(href='/' class=title =='Home'? 'active' : '')
         | Home
         span.sr-only (current)
-        a.nav-item.nav-link(href='/available' class=title =='Available' ? 'active' : '') Available
+      a.nav-item.nav-link(href='/available' class=title =='Available' ? 'active' : '') Available
+      a.nav-item.nav-link(href='/community' class=title =='Community' ? 'active' : '') Community
       if user
         a.nav-item.nav-link(href='/logout') Logout
