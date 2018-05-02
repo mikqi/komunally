@@ -10,8 +10,10 @@ $(document).ready(() => {
 
   const toggleStrength = ({currentCard, method = 'hide'}) => {
     const methods = method === 'edit' ? {form: 'removeClass', trigger: 'addClass'} : {form: 'addClass', trigger: 'removeClass'}
+    const value = Number(currentCard.find('.js-strength-value').val())
     currentCard.find('.js-strength-form')[methods.form]('d-none')
     currentCard.find('.js-strength-static, .js-strength-edit-trigger')[methods.trigger]('d-none')
+    currentCard.find('.form-control').val(value)
   }
 
   $editStrengthTrigger.on('click', (e) => {
